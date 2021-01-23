@@ -23,9 +23,20 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe acessibility on the web to someone new to programming?
+
+    Accessibility means that you are building websites that can be easily viewed on multiple devices for all kinds of different people. The goal is to make a site accessible to everyone regardless if they fit the standard model or not. Younger more tech savvy people, as well as older less savvy people. People who have a hard time reading, someone who doesn't have use of their hands, etc. When opening a website on your phone you want it to be just as clean and aesthetic as it would be on a desktop. Because the screen size is smaller this often included modification to the code. 
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+    The main things that will help to make you website more accessible include using media queries to resize your page to different screen sizes. Using screen readers is another great way to build accessibility. Screen readers are web extensions that help people who wouldn't otherwise be able to read the page. They often read the page aloud or translate it to brail. A screen reader relies on html and is a huge reason why your html must be semantic and easy to a understand. Because many people are colorblind you must also be able to use color in an accessible manner. If you can't turn greyscale onto your page and have it equally understood, rework your website. Color should never the only thing in an item that conveys a message.
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+    Simply put, variables are ways to store data. Most things on the web are variables. In order to store this data you need to declare it using a keyword. The main keywords are let, const, and var. They each serve a different purpose. Variables are important because data is always changing on websites and you need to have a way to keep track, organize, and store all of these parts.
+
 4. What is the purpose of using functions in code?
+
+    functions in code save a lot of time. They allow us to have repeating sections of code without spending time manually doing it ourselves. This at first may not seem like a big deal when dealing with small chucnks of code, but when working with projects that have hundreds of lines of code it is imperitive to not have to go in and manually type out every step several times, when running a function once will do the same thing.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -47,8 +58,8 @@ NOTE: Tests will run for the JavaScript portion of this challenge only
 
 *Before you jump in, take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built. During this time, [Review the provided design files](design/). You have been provided all content necessary in the [index.html file](index.html) and basic styling in the [index.css file](css/index.css).*
 
-* [ ] Add a viewport meta tag to the head of your index.html page.
-* [ ] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png).
+* [x] Add a viewport meta tag to the head of your index.html page.
+* [x] Add responsive breakpoints to your code for 500px such that your styles match the [mobile design file](design/Mobile.png).
 
 ### Task 2b: Minimum Viable Product - JavaScript
 

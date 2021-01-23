@@ -1,3 +1,4 @@
+
 /*CSS RESET*/
 html, body, div, span, applet, object, iframe,  
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
@@ -133,4 +134,45 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+
+/*media queries */
+
+@media (max-width:500px) {
+
+nav{
+    justify-content: space-evenly;
+    
+}
+nav a{
+    justify-content: space-between;
+}
+img{
+    
+    height: 35vh;
+    width: 60vh;
+    
+}
+
+.title-container div{
+    height: 40vh;
+    width: 100%;
+    background-image: <img src="img/home.png">;
+}
+.artist{
+    width: 80%;
+}
+.artists-container{
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.artists-container a{
+    font-size: 2rem;
+}
+.bio{
+    font-size: 1rem;
+}
+}
 }
