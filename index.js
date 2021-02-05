@@ -217,10 +217,9 @@ console.log(artists[2]['bio']);
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-/* 
+
 artists[8].name = "Vincent Van Gough"
 console.log(artists[8]); 
-*/
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -246,18 +245,29 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(arr, param1, param2,){
+
+function get20s(artists){
   const results = []
   for(let i = 0; i < artists.length; i++){
-    if(param1 >= "1900" || param1 <= "2000"){
-      results.push(arr[param1][param2])
-    }
-    return results;
+    let birthYearValid = false
+    let deathYearValid = false
+  let year = artists[i].years
+  //console.log(year)
+  let splitYear = year.split(' - ')
+  //console.log(splitYear)
+  if(Number(splitYear[0]) - 1900 > 0){
+    birthYearValid = true
   }
-  /*Your Code Here*/
+  if(2000 - Number(splitYear[1]) > 0){
+    deathYearValid = true
+  }
+  if(birthYearValid && deathYearValid){
+    results.push(artists[i].name)
+  }
+  }
+  return results
 }
-get20s(artists, "years", "name" )
-console.log(get20s(artists, "years", "name" ));
+get20s(artists);
 
 
 
@@ -270,12 +280,14 @@ console.log(get20s(artists, "years", "name" ));
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
- function removeArtist(arr, param1, num1){
+ const index = 0
 
-  const results = removeArtist(arr, param1, num1)
-  arr.splice(num1)
-  return results
+ function removeArtist(artists, index){
+   artists.splice(index, 1)
+   return artists.length
 }
+console.log(removeArtist(artists, 0));
+
 
 removeArtist(artists, artists.length,0);
 console.log(removeArtist(artists, artists.length,0));
@@ -321,17 +333,17 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 
-function lotsOfArt(arr, param1, num1){
-  const results = [];
-  for(let i = 0; i <artists.length; i++){
-    if(num1 >= 100){
-      results.push(arr [param1] [num1]);
-    }
-  }
-return results;
-}
 
-console.log(lotsOfArt(artists, ['names'], ['paintings']));
+function lotsOfArt(artists){
+  const newArray = [];
+  for (let i = 0; i < artists.length; i++){
+      if(artists[i].paintings > 100){
+          newArray.push(artists[i].name);
+      }
+  }
+  return newArray
+}
+console.log(lotsOfArt(artists));
 
 
 
